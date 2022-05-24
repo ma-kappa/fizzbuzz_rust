@@ -98,3 +98,16 @@ pub fn fizz_buzz8() {
     };
     (1 ..= 100).map(fz).for_each(|x| println!("{}", x))     // Using higher-order functions and the closure.
 }
+
+pub fn fizz_buzz9() {
+    let res = (1 ..= 100)
+        .fold(format!(""), |buf, x| {       // Perform string convolution.
+            match (x % 3, x % 5) {
+                (0, 0) => format!("{}FizzBuzz\n", buf),
+                (0, _) => format!("{}Fizz\n", buf),
+                (_, 0) => format!("{}Buzz\n", buf),
+                _      => format!("{}{}\n", buf, x),
+            }
+        });
+    println!("{}", res)
+}
