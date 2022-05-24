@@ -86,3 +86,15 @@ pub fn fizz_buzz7() {
         println!("{}", s)
     }
 }
+
+pub fn fizz_buzz8() {
+    let fz = |x: i32| {     // Difining Closure
+        match (x % 3, x % 5) {
+            (0, 0) => format!("FizzBuzz"),
+            (0, _) => format!("Fizz"),
+            (_, 0) => format!("Buzz"),
+            _      => x.to_string(),
+        }
+    };
+    (1 ..= 100).map(fz).for_each(|x| println!("{}", x))     // Using higher-order functions and the closure.
+}
