@@ -21,4 +21,6 @@ fn main() {
     fizz_buzz::fizz_buzz9();
     println!("--- Call fizz_buzz10() ---");
     fizz_buzz::fizz_buzz10();
+    println!("--- Call fizz_buzz11() ---");
+    fizz_buzz::fizz_buzz11();
 }
