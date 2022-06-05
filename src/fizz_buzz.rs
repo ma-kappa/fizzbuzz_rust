@@ -203,3 +203,8 @@ pub fn fizz_buzz13() {
 pub fn fizz_buzz14(end: usize) {
     (1 ..).take(end).map(|x| FizzBuzz::new(3, 5, 0).to_str(x)).for_each(|x| println!("{}", x))
 }
+
+pub fn fizz_buzz15(end: u32) {
+    if end > 1 { fizz_buzz15(end - 1) }
+    println!("{}", FizzBuzz {div_a: 3, div_b: 5, zero: 0}.to_str(end))
+}
