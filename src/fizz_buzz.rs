@@ -199,3 +199,7 @@ pub fn fizz_buzz13() {
     println!("--- Type u32 ---");
     (1 ..= 100).map(|x: u32| FizzBuzz::new(3, 5, 0).to_str(x)).for_each(|x| println!("{}", x));
 }
+
+pub fn fizz_buzz14(end: usize) {
+    (1 ..).take(end).map(|x| FizzBuzz::new(3, 5, 0).to_str(x)).for_each(|x| println!("{}", x))
+}
